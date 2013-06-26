@@ -1,4 +1,4 @@
-Arr_to_hash = proc do |row, col|
+Arr_to_hash = proc do |row|
     corelate = {}
     col = ['a', 'b', 'c']
     case row  
