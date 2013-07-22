@@ -1,0 +1,3 @@
+Arr_to_hash = proc {|a,b|
+	Hash[a.zip b]
+$end}
