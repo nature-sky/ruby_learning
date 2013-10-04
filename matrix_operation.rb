@@ -42,6 +42,6 @@ def row_operation matrix
       break
     end
 
-end
+  end
   subMatrix
 end
