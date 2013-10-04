@@ -1,0 +1,11 @@
+def move_left_leading_one_to_first_row matrix
+  i = matrix.index { |row| not row.first == 0 }
+  matrix[0], matrix[i] = matrix[i], matrix[0]
+  matrix
+  end
+
+def divide_leading_entry_from_first_row matrix
+  divider = matrix[0].first
+  matrix[0].each_with_index { |ele, i| matrix[0][i] = matrix[0][i] / divider }
+  matrix
+  end	
