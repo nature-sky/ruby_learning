@@ -1,12 +1,10 @@
 def row_operation matrix
-	column = 0,row = 0,flag = nil
+	column = 0,row = 0
   subMatrix = matrix
 	for column in 0..(subMatrix.length-1)
-		flag = nil
 		def move_leftmost_leading_one_to_first_row (subMatrix , column, row) 
 			for counter in (column)..(subMatrix.length-1)
 				if(not subMatrix[counter][row] == 0) 
-					flag = counter
 	 				subMatrix[column], subMatrix[counter] = subMatrix[counter], subMatrix[column]
 					break
 				end
@@ -34,10 +32,8 @@ def row_operation matrix
 			break
 		else
 			move_leftmost_leading_one_to_first_row subMatrix , column, row
-			if(flag != nil)
 				divide_leading_entry_from_first_row subMatrix , column, row
 				replace_to_zero_of_first_row subMatrix , column, row
-			end
 		end
 
 		if(row < subMatrix[column].length-1)
